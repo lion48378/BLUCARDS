@@ -1,0 +1,266 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#080d18">
+    <meta name="description" content="Collect football and basketball stars with BLUCARDS.">
+    <title>BLUCARDS | Digital Collectibles</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- NAVIGATION -->
+    <header class="navbar">
+        <a href="#home" class="logo">B<span>C</span></a>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#packs">Packs</a>
+            <a href="#marketplace">Marketplace</a>
+            <a href="#collection">Collection</a>
+            <a href="#my-club">My Club</a>
+        </nav>
+
+        <div class="profile" id="accountArea">
+            <div class="avatar">B</div>
+            <button id="accountButton">SIGN IN</button>
+        </div>
+    </header>
+
+    <main>
+
+        <!-- HERO -->
+        <section class="hero" id="home">
+            <div class="hero-content">
+                <p class="eyebrow">THE FIRST COLLECTION · 2026</p>
+                <h1>BUILD YOUR<br><span>LEGACY.</span></h1>
+                <p>
+                    Discover football and basketball stars.
+                    Collect rare cards, build your collection
+                    and become a BLUCARDS legend.
+                </p>
+                <a href="#packs" class="main-button">EXPLORE PACKS ↗</a>
+            </div>
+
+            <div class="hero-card">
+                <div class="card-label">BLUCARDS · 001</div>
+                <div class="card-symbol">★</div>
+                <div class="hero-card-bottom">
+                    <span>FIRST EDITION</span>
+                    <h2>THE NEXT<br>GENERATION</h2>
+                    <span>COLLECT THE MOMENT.</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- STATISTICS -->
+        <section class="stats">
+            <div>
+                <h2 id="totalCards">0</h2>
+                <p>CARDS OWNED</p>
+            </div>
+            <div>
+                <h2 id="uniqueCards">0</h2>
+                <p>UNIQUE CARDS</p>
+            </div>
+            <div>
+                <h2 id="completion">0%</h2>
+                <p>COLLECTION COMPLETE</p>
+            </div>
+        </section>
+
+        <!-- PACK OPENING -->
+        <section class="section" id="packs">
+            <p class="eyebrow">DISCOVER SOMETHING NEW</p>
+            <h2>PACK OPENING</h2>
+
+            <div class="pack-container">
+                <div class="pack-art">
+                    <span>BC</span>
+                    <h3>FIRST<br>EDITION</h3>
+                    <small>2026 COLLECTION</small>
+                </div>
+
+                <div class="pack-details">
+                    <h3>Starter Pack</h3>
+                    <p>Discover three random cards from our first collection.</p>
+                    <button id="openPack">OPEN FREE PACK ✦</button>
+                    <p id="packMessage">Your next discovery awaits.</p>
+                </div>
+            </div>
+
+            <div id="packResults" class="card-grid"></div>
+        </section>
+
+        <!-- MARKETPLACE -->
+        <section class="section" id="marketplace">
+            <p class="eyebrow">THE BLUCARDS EXCHANGE</p>
+            <h2>MARKETPLACE</h2>
+
+            <div class="market-header">
+                <div>
+                    <p class="market-label">YOUR AVAILABLE BALANCE</p>
+                    <h3>
+                        <span id="creditBalance">500</span>
+                        <span class="credit-symbol">BC</span>
+                    </h3>
+                </div>
+                <p class="market-description">
+                    Discover new players and expand your collection.
+                </p>
+            </div>
+
+            <div class="market-controls">
+                <button class="market-filter selected" data-market-filter="ALL">ALL</button>
+                <button class="market-filter" data-market-filter="FOOTBALL">FOOTBALL</button>
+                <button class="market-filter" data-market-filter="BASKETBALL">BASKETBALL</button>
+            </div>
+
+            <div id="marketplaceGrid" class="card-grid"></div>
+            <p id="marketMessage" class="market-message">
+                Welcome to the BLUCARDS Marketplace.
+            </p>
+        </section>
+
+        <!-- COLLECTION -->
+        <section class="section" id="collection">
+            <p class="eyebrow">YOUR PERSONAL LINEUP</p>
+            <h2>MY COLLECTION</h2>
+
+            <div class="filters">
+                <button data-filter="ALL" class="selected">ALL</button>
+                <button data-filter="FOOTBALL">FOOTBALL</button>
+                <button data-filter="BASKETBALL">BASKETBALL</button>
+            </div>
+
+            <div id="collectionGrid" class="card-grid"></div>
+            <p id="emptyMessage">
+                Your collection is empty. Open a pack to get started!
+            </p>
+        </section>
+
+        <!-- MY CLUB -->
+        <section class="section club-section" id="my-club">
+            <p class="eyebrow">YOUR COLLECTOR IDENTITY</p>
+            <h2>MY CLUB</h2>
+
+            <div class="club-profile">
+                <div class="club-avatar" id="clubAvatar">B</div>
+
+                <div class="club-identity">
+                    <p class="club-label">BLUCARDS COLLECTOR</p>
+                    <h3 id="clubUsername">GUEST COLLECTOR</h3>
+                    <p id="clubEmail">Sign in to view your account details.</p>
+                    <span id="clubStatus">GUEST</span>
+                </div>
+            </div>
+
+            <div class="club-stats">
+                <div>
+                    <p>TOTAL CARDS</p>
+                    <h3 id="clubTotalCards">0</h3>
+                </div>
+                <div>
+                    <p>UNIQUE PLAYERS</p>
+                    <h3 id="clubUniqueCards">0</h3>
+                </div>
+                <div>
+                    <p>COMPLETION</p>
+                    <h3 id="clubCompletion">0%</h3>
+                </div>
+                <div>
+                    <p>BC BALANCE</p>
+                    <h3 id="clubCredits">500</h3>
+                </div>
+            </div>
+
+            <div class="club-rarest">
+                <p class="eyebrow">YOUR RAREST DISCOVERY</p>
+                <div id="clubRarestCard">
+                    <p>Open a pack to discover your first card.</p>
+                </div>
+            </div>
+
+            <div class="club-actions">
+                <a href="#collection" class="main-button">VIEW COLLECTION ↗</a>
+                <button id="clubSignOut" class="logout-button" hidden>
+                    SIGN OUT
+                </button>
+                <button id="clubSignIn" class="main-button">
+                    SIGN IN TO YOUR CLUB
+                </button>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer>
+        <div class="logo">BLU<span>CARDS</span></div>
+        <p>COLLECT THE MOMENT. © 2026 BLUCARDS</p>
+    </footer>
+
+    <!-- LEGENDARY REVEAL -->
+    <div id="legendaryOverlay" class="legendary-overlay">
+        <div class="legendary-content">
+            <p class="legendary-eyebrow">BLUCARDS · SPECIAL DISCOVERY</p>
+            <h2>LEGENDARY!</h2>
+            <div id="legendaryCard" class="legendary-card"></div>
+            <p class="legendary-caption">A NEW LEGEND HAS ARRIVED.</p>
+            <button id="claimLegendary">CLAIM CARD ✦</button>
+        </div>
+    </div>
+
+    <!-- PLAYER PROFILE -->
+    <div id="playerModal" class="player-modal">
+        <div class="player-modal-content">
+            <button id="closePlayerModal" class="close-player-modal" aria-label="Close profile">×</button>
+            <div id="playerProfileContent"></div>
+        </div>
+    </div>
+
+    <!-- BLUCARDS AUTHENTICATION MODAL -->
+    <div id="authModal" class="auth-modal">
+        <div class="auth-box">
+            <button id="closeAuth" class="auth-close" aria-label="Close login">×</button>
+
+            <p class="eyebrow">WELCOME TO BLUCARDS</p>
+            <h2 id="authTitle">YOUR CLUB STARTS HERE.</h2>
+            <p id="authDescription">Sign in to your collector account.</p>
+
+            <form id="authForm">
+                <div id="usernameField" class="auth-field" hidden>
+                    <label for="authUsername">USERNAME</label>
+                    <input id="authUsername" type="text" placeholder="Choose a username" minlength="3" maxlength="20">
+                </div>
+
+                <div class="auth-field">
+                    <label for="authEmail">EMAIL</label>
+                    <input id="authEmail" type="email" placeholder="Your email address" required>
+                </div>
+
+                <div class="auth-field">
+                    <label for="authPassword">PASSWORD</label>
+                    <input id="authPassword" type="password" placeholder="Your password" minlength="8" required>
+                </div>
+
+                <button id="authSubmit" type="submit">SIGN IN</button>
+            </form>
+
+            <p id="authMessage" role="status"></p>
+            <button id="authSwitch" class="auth-switch">Don't have an account? Create one</button>
+            <button id="logoutButton" class="logout-button" hidden>SIGN OUT</button>
+        </div>
+    </div>
+
+    <!-- SCRIPTS -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="supabase.js"></script>
+    <script src="auth.js"></script>
+    <script src="app.js"></script>
+    <script src="club.js"></script>
+
+</body>
+</html>
